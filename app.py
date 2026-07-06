@@ -278,13 +278,14 @@ with st.sidebar:
     st.markdown("<div style='font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#3a4060;margin-bottom:10px;padding:0 4px;'>Model Details</div>", unsafe_allow_html=True)
     for k, v in [
         ("Algorithm",   "Random Forest"),
-        ("Estimators",  "100 trees"),
-        ("Random State","42"),
+        ("Estimators",  "102 trees"),
+        ("Max Depth",   "30"),
         ("Dataset",     "Bank Marketing"),
-        ("Total Rows",  "41,188"),
+        ("Total Rows",  "41,174 (post-cleaning)"),
         ("Features",    "20 columns"),
-        ("Train Split", "80% → 32,950"),
-        ("Test Split",  "20% → 8,238"),
+        ("Train Split", "80% → 32,939"),
+        ("Test Split",  "20% → 8,235"),
+        ("Test Accuracy","91.50%"),
         ("Target",      "y → yes / no"),
         ("LE Classes",  "no=0 · yes=1"),
     ]:
@@ -480,7 +481,7 @@ if submitted:
             <div style='margin-top:20px;padding-top:16px;border-top:1px solid rgba(99,120,220,0.1);'>
                 <div style='font-size:10px;color:#3a4060;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:6px;'>Model</div>
                 <div style='font-size:12px;color:#7eb3ff;font-family:"JetBrains Mono",monospace;'>RandomForestClassifier</div>
-                <div style='font-size:11px;color:#3a4060;margin-top:2px;'>n_estimators=100 · random_state=42</div>
+                <div style='font-size:11px;color:#3a4060;margin-top:2px;'>n_estimators=102 · max_depth=30 · min_samples_split=9</div>
             </div>
         </div>""", unsafe_allow_html=True)
 
