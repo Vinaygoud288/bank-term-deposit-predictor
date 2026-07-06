@@ -21,7 +21,7 @@ st.set_page_config(
 # ─────────────────────────────────────────────────────────────
 @st.cache_resource
 def load_artifacts():
-    arts = joblib.load("model_prod_files.pkl")
+    arts = joblib.load("model_prod_files1.pkl")
     return (
         arts["model"],
         arts["cat_encoder"],
